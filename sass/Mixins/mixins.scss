@@ -1,0 +1,62 @@
+﻿
+$bp-sm-max:767px;
+$bp-sm-min:768px;
+$bp-md-max:991px;
+$bp-md-min:992px;
+$bp-lg-max:1199px;
+$bp-lg-min:1200px;
+
+$col-padding:20px;
+$col-padding-tight:10px;
+
+
+$maroon:#7b134d;
+$blue:#1d3561;
+$light-grey:#f1f4f7;
+$green:#8dc63f;
+
+@mixin boxshadow {
+    -webkit-box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.04);
+    -moz-box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.04);
+    box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.04);
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+@mixin transition($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+@mixin scale($scale) {
+	 @include transform(scale($scale));
+} 
+
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}

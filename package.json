@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "name": "LawrenceDavid",
+  "private": true,
+  "devDependencies": {
+    "del": "2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.3.2"
+  }
+}
