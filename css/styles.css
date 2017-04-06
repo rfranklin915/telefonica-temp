@@ -1245,6 +1245,45 @@ body {
     left: 0;
     width: 100%; }
 
+.container {
+  display: block;
+  position: relative;
+  min-width: 1200px; }
+
+.btn {
+  display: inline-block;
+  padding: 8px 36px 12px 36px;
+  border: 0;
+  background-color: #00DD85;
+  text-decoration: none;
+  color: #ffffff;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  -ms-transition: all 300ms;
+  -o-transition: all 300ms;
+  transition: all 300ms; }
+  .btn:hover {
+    background-color: #00aa66; }
+  .btn.hollow {
+    padding: 6px 34px 10px 34px;
+    background: none;
+    border: 2px solid #ffffff; }
+    .btn.hollow:hover {
+      background-color: #ffffff;
+      color: #063f53; }
+
+.covervid-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.wide-container {
+  max-width: 1950px;
+  margin-left: auto;
+  margin-right: auto; }
+
 h1, h2, h3, h4, h5 {
   font-weight: normal;
   line-height: 1.2; }
@@ -1266,6 +1305,9 @@ img {
 
 .padding-40 {
   padding-top: 40px;
+  padding-bottom: 40px; }
+
+.padding-bottom-40 {
   padding-bottom: 40px; }
 
 .centered {
@@ -1333,8 +1375,8 @@ img {
 nav.main-nav > ul {
   list-style: none;
   padding: 0;
-  margin: 0 0 0 20%;
-  float: left;
+  margin: 0;
+  float: right;
   font-size: 1.1em; }
   nav.main-nav > ul > li {
     display: inline-block;
@@ -1343,7 +1385,7 @@ nav.main-nav > ul {
     nav.main-nav > ul > li > a {
       color: inherit;
       text-decoration: none;
-      padding: 0 18px;
+      padding: 0 14px;
       height: 68px;
       line-height: 68px;
       display: block;
@@ -1357,7 +1399,6 @@ nav.main-nav > ul {
       nav.main-nav > ul > li > a.expandable:after {
         font-family: telefonica-icons;
         content: "\E000";
-        color: #48c8db;
         font-size: 0.6em;
         display: inline-block;
         margin: 0 0 0 8px; }
@@ -1381,7 +1422,7 @@ nav.main-nav .dropdown {
     visibility: visible;
     bottom: 0; }
   nav.main-nav .dropdown .dd-table {
-    margin-top: 30px;
+    margin-top: 50px;
     color: #ffffff;
     width: 100%;
     vertical-align: top;
@@ -1391,7 +1432,10 @@ nav.main-nav .dropdown {
     -moz-transition: all 400ms;
     -ms-transition: all 400ms;
     -o-transition: all 400ms;
-    transition: all 400ms; }
+    transition: all 400ms;
+    -ms-transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px); }
     nav.main-nav .dropdown .dd-table td {
       width: 25%;
       vertical-align: top;
@@ -1462,22 +1506,26 @@ nav.main-nav .dropdown {
       border-bottom: 0; }
   nav.main-nav .dropdown.visible .dd-table {
     opacity: 1;
-    filter: alpha(opacity=100); }
+    filter: alpha(opacity=100);
+    -ms-transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px); }
 
 .intro-carousel {
   /* Slick */ }
   .intro-carousel .intro-area {
-    height: 400px;
-    padding: 25px;
+    height: 480px;
     margin-bottom: 0; }
     .intro-carousel .intro-area .title {
-      font-size: 32px; }
-    .intro-carousel .intro-area .title, .intro-carousel .intro-area .date, .intro-carousel .intro-area .sub-title {
-      -ms-transform: translateY(10px);
+      font-size: 36px; }
+    .intro-carousel .intro-area .container {
+      height: 480px; }
+    .intro-carousel .intro-area .content {
+      -ms-transform: translateY(-50%);
       /* IE 9 */
-      -webkit-transform: translateY(10px);
+      -webkit-transform: translateY(-50%);
       /* Safari */
-      transform: translateY(10px);
+      transform: translateY(-50%);
       opacity: 0;
       filter: alpha(opacity=0);
       -webkit-transition: all 800ms;
@@ -1485,17 +1533,14 @@ nav.main-nav .dropdown {
       -ms-transition: all 800ms;
       -o-transition: all 800ms;
       transition: all 800ms; }
-    .intro-carousel .intro-area.slide-vis .title, .intro-carousel .intro-area.slide-vis .date, .intro-carousel .intro-area.slide-vis .sub-title {
-      -ms-transform: translateY(0px);
+    .intro-carousel .intro-area.slide-vis .content {
+      -ms-transform: translateY(-60%);
       /* IE 9 */
-      -webkit-transform: translateY(0px);
+      -webkit-transform: translateY(-60%);
       /* Safari */
-      transform: translateY(0px);
+      transform: translateY(-60%);
       opacity: 1;
       filter: alpha(opacity=100); }
-    .intro-carousel .intro-area.slide-vis .date, .intro-carousel .intro-area.slide-vis .sub-title {
-      opacity: 0.7;
-      filter: alpha(opacity=70); }
   .intro-carousel .slick-dots {
     position: absolute;
     bottom: 20px;
@@ -1506,18 +1551,54 @@ nav.main-nav .dropdown {
     .intro-carousel .slick-dots li button {
       background-color: #ffffff; }
     .intro-carousel .slick-dots li.slick-active button {
-      background-color: #fefe00; }
+      background-color: #00DD85; }
+
+.intro-container {
+  z-index: 100; }
 
 .intro-area {
   display: block;
   background: #063f53;
   height: 190px;
   margin-bottom: 20px;
-  padding: 18px;
+  padding: 0;
   text-decoration: none; }
+  .intro-area:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+36,ffffff+99&0.3+37,0+100 */
+    background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.3) 36%, rgba(4, 4, 4, 0.3) 37%, rgba(255, 255, 255, 0) 99%, rgba(255, 255, 255, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.3) 36%, rgba(4, 4, 4, 0.3) 37%, rgba(255, 255, 255, 0) 99%, rgba(255, 255, 255, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.3) 36%, rgba(4, 4, 4, 0.3) 37%, rgba(255, 255, 255, 0) 99%, rgba(255, 255, 255, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d000000', endColorstr='#00ffffff',GradientType=1 );
+    /* IE6-9 */
+    display: block;
+    z-index: 90; }
+  .intro-area .content {
+    display: block;
+    max-width: 40%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    /* IE 9 */
+    -webkit-transform: translateY(-50%);
+    /* Safari */
+    transform: translateY(-50%); }
+  .intro-area .buttons {
+    clear: both;
+    margin-top: 28px; }
+    .intro-area .buttons .btn {
+      margin-right: 15px; }
   .intro-area .title {
-    font-size: 22px;
-    max-width: 70%;
+    font-size: 25px;
     display: block;
     font-weight: 300;
     color: #ffffff; }
@@ -1529,8 +1610,8 @@ nav.main-nav .dropdown {
     display: inline-block;
     clear: both;
     color: #ffffff;
-    font-size: 15px;
-    padding-top: 5px;
+    font-size: 20px;
+    padding-top: 10px;
     opacity: 0.7;
     filter: alpha(opacity=70); }
 

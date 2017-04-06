@@ -6,7 +6,7 @@
         $carousel.find('.slick-track .slick-slide').removeClass('slide-vis');
 
         setTimeout(function () {
-            console.log(currentSlide.currentSlide + 1);
+            //console.log(currentSlide.currentSlide + 1);
             $carousel.find('.slick-track .slick-slide:nth-of-type(' + (currentSlide.currentSlide + 1) + ')').addClass('slide-vis');
         }, 100);
     });
@@ -61,15 +61,10 @@
             }, 400);
         }
 
-            
+    });
 
-
-        
-
-            
-                
-    })
-
+    $('.covervid-video').coverVid(1920, 1080);
+    $('.covervid-video').get(0).play();
         
 
 })();
