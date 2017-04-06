@@ -369,9 +369,9 @@ th {
   .container {
     width: 970px; } }
 
-@media (min-width: 1250px) {
+@media (min-width: 1450px) {
   .container {
-    width: 1200px; } }
+    width: 1400px; } }
 
 .container-fluid {
   margin-right: auto;
@@ -769,7 +769,7 @@ th {
   .col-md-offset-0 {
     margin-left: 0%; } }
 
-@media (min-width: 1250px) {
+@media (min-width: 1450px) {
   .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
     float: left; }
   .col-lg-12 {
@@ -1017,7 +1017,7 @@ th {
   .visible-md-inline-block {
     display: inline-block !important; } }
 
-@media (min-width: 1250px) {
+@media (min-width: 1450px) {
   .visible-lg {
     display: block !important; }
   table.visible-lg {
@@ -1028,15 +1028,15 @@ th {
   td.visible-lg {
     display: table-cell !important; } }
 
-@media (min-width: 1250px) {
+@media (min-width: 1450px) {
   .visible-lg-block {
     display: block !important; } }
 
-@media (min-width: 1250px) {
+@media (min-width: 1450px) {
   .visible-lg-inline {
     display: inline !important; } }
 
-@media (min-width: 1250px) {
+@media (min-width: 1450px) {
   .visible-lg-inline-block {
     display: inline-block !important; } }
 
@@ -1052,7 +1052,7 @@ th {
   .hidden-md {
     display: none !important; } }
 
-@media (min-width: 1250px) {
+@media (min-width: 1450px) {
   .hidden-lg {
     display: none !important; } }
 
@@ -1661,7 +1661,7 @@ nav.main-nav .dropdown {
   background-color: #f8f8f8; }
   .block-link .text {
     display: block;
-    padding: 15px 15px 25px 15px;
+    padding: 15px 15px 15px 15px;
     color: #6e8c97; }
     .block-link .text .title {
       color: #063f53;
@@ -1674,6 +1674,40 @@ nav.main-nav .dropdown {
     .block-link .text .arrow-link {
       display: inline-block;
       margin-top: 15px; }
+    .block-link .text .sub {
+      color: #cecece; }
+  .block-link.horizontal {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative; }
+    .block-link.horizontal img {
+      float: left;
+      width: 40%; }
+    .block-link.horizontal .text {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      float: left;
+      width: 60%;
+      padding-top: 15px; }
+      .block-link.horizontal .text .title {
+        font-size: 18px; }
+      .block-link.horizontal .text .sub {
+        position: absolute;
+        bottom: 15px;
+        left: 15px; }
+  .block-link.large-block {
+    height: 377px; }
+    .block-link.large-block .text {
+      padding-top: 8px; }
+
+@media only screen and (max-width: 1450px) {
+  .block-link.horizontal img {
+    width: 47%; }
+  .block-link.horizontal .text {
+    width: 53%; } }
 
 .white-block {
   display: inline-block;

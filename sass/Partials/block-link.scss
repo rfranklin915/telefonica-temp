@@ -14,7 +14,7 @@
     background-color:$lighter-grey;
     .text {
         display:block;
-        padding:15px 15px 25px 15px;
+        padding:15px 15px 15px 15px;
         color:$midblue;
         .title {
             color:$darkblue;
@@ -30,5 +30,51 @@
             display:inline-block;
             margin-top:15px;
         }
+        .sub {
+            color:$mid-grey;
+        }
+    }
+    &.horizontal {
+        float:left;
+        width:100%;
+        margin-bottom:20px;
+        position:relative;
+        img {
+            float:left;
+            width:40%;
+        }
+        .text {
+            position:absolute;
+            right:0;
+            top:0;
+            bottom:0;
+            float:left;
+            width:60%;
+            padding-top:15px;
+            .title {
+                font-size:18px;
+            }
+            .sub {
+                position:absolute;
+                bottom:15px;
+                left:15px;
+            }
+        }
+    }
+    &.large-block {
+        height:377px;
+        .text {
+            padding-top:8px;
+        }
+    }
+}
+
+@media only screen and (max-width:1450px) {
+    .block-link.horizontal img {
+        width:47%;
+    }
+
+    .block-link.horizontal .text {
+        width:53%;
     }
 }
