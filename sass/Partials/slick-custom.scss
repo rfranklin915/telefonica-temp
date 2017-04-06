@@ -9,8 +9,8 @@
     margin:0;
     padding:0;
     list-style:none;
+    width:100%;
     display:inline-block!important;
-    width:180px;
     text-align:center;
     li {
         margin:0;
@@ -31,7 +31,7 @@
         }
         &.slick-active {
             button {
-                background-color:$cyan;
+                background-color:$green;
                 @include opacity(1);
             }
         }

@@ -1,0 +1,199 @@
+﻿@import '../Mixins/mixins';
+
+.social-area-carousels {
+    text-align:center;
+    h4 {
+        //font-family:'TelefonicaScript', Arial, sans-serif;
+        font-size:2.2em;
+        margin:0 0 25px 0;
+        color:#ffffff;
+        vertical-align:middle;
+        .social-area-icon {
+            //margin-right:20px;
+            margin-top:-10px;
+        }
+        a {
+            color:#ffffff;
+            text-decoration:none;
+            &:hover {
+                color:#ffffff;
+            }
+        }
+    }
+    img {
+        max-width:150px;
+        margin:0 auto 15px auto;
+        position:relative;
+        display:block;
+    }
+    .slick-track {
+        min-height:160px;
+    }
+    p {
+        margin:0;
+        font-size:20px;
+    }
+    span.timestamp {
+        padding-top:20px;
+        display:inline-block;
+        color:#ffffff;
+        font-size:18px;
+        @include opacity(0.8);
+    }
+    .slick-slide {
+        &:focus {
+            outline:0;
+        }
+        a {
+            color:#ffffff;
+            text-decoration:none;
+        }
+    }
+    .btn {
+        margin-top:22px;
+    }
+    .social-carousel {
+        ul.slick-dots {
+            list-style:none;
+            margin:40px 0 0 0;
+            padding:0;
+            li {
+                display:inline;
+                padding:0 0px;
+                button {
+                    overflow:hidden;
+                    border:0; 
+                    text-indent:-999px;
+                    width:23px;
+                    height:23px; 
+                    border:6px solid $green;
+                    padding:0;
+                    background-color:#ffffff;
+                    @include border-radius(50%);
+                    &:focus {
+                        outline: 0;
+                    }
+                    &:hover {
+                        background-color:darken( #ffffff, 10% )
+                    }
+                }
+                &.slick-active {
+                    button {
+                        background-color:$strongblue!important;
+                    }
+                }
+            }
+        }
+    }
+    .btn-chunky-filled {
+        margin-top:25px;
+    }
+}
+
+.social-area-icon {
+    width:46px;
+    height:46px;
+    display:inline-block;
+    vertical-align:middle;
+    @include border-radius(50%);
+    color:#ffffff;
+    border:0;
+    padding:0;
+    text-align: center;
+    &:before {
+        font-family:'telefonica-icons';
+        color:#ffffff;
+        line-height:46px;
+        font-size:20px;
+        display:block;
+        width:100%;
+        text-align: center;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+
+.social-area-icon.linkedin {
+    background-color:#ffffff;
+    &:before {content: "\E00D"; color:#2c7bb5;}
+}
+.social-area-icon.twitter {
+    background-color:#ffffff;
+    &:before {content: "\E008"; color:#3facec;}
+}
+.social-area-icon.youtube {
+    background-color:#ffffff;
+    &:before {content: "\E007"; color:#b20b11;}
+}
+
+.social-swap-sm {
+    padding-bottom:50px;
+    min-height:120px;
+    .col-xs-4 {
+        border-left:1px solid lighten(#ffffff, 20%);
+        &:first-child {
+            border-left:0;
+        }
+        button {
+            @include transition(all 0.3s);
+            &.active {
+                margin-top:-12px;
+                height:64px;
+                width:64px;
+                &:before {
+                }
+            }
+            &:focus {
+                outline:0;
+            }
+        }
+    }
+}
+
+.social-swap-sm {
+    display:none;
+}
+
+
+/*.social-area-icon {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background-clip: padding-box;
+        color: #ffffff;
+        border: 0;
+        padding: 0;
+        text-align: center;
+    }
+    .social-area-icon:before {
+        font-family: 'telefonica-icons';
+        color: #ffffff;
+        line-height: 40px;
+        font-size: 20px;
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .social-area-icon.linkedin {
+        background-color: #0077b5;
+    }
+    .social-area-icon.linkedin:before {
+        content: "\E00D";
+    }
+    .social-area-icon.twitter {
+        background-color: #55acee;
+    }
+    .social-area-icon.twitter:before {
+        content: "\E008";
+    }
+    .social-area-icon.youtube {
+        background-color: #cc181e;
+    }
+    .social-area-icon.youtube:before {
+        content: "\E007";
+    }*/

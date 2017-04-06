@@ -28,6 +28,17 @@
         dots: true
     })
 
+    $('.whatsnew-carousel').slick({
+        arrows: false,
+        dots: true
+    })
+
+    $('.social-carousel').slick({
+        dots: true,
+        arrows: false,
+        speed: 250
+    });
+
 
     // Mobile Navigation
     $('nav.main-nav ul li a').click(function (event) {

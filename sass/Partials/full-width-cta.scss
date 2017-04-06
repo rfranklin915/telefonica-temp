@@ -1,0 +1,41 @@
+﻿
+@import '../Mixins/mixins';
+
+.full-width-cta {
+    width:100%;
+    height:420px;
+    background-position:50% 50%;
+    background-size:cover;
+    position:relative;
+    text-align:center;
+    .btn {
+        clear:both;
+        margin-top:40px;
+    }
+    p {
+        max-width:400px;
+        margin:125px auto 0 auto;
+        display:block;
+        font-size:34px;
+        line-height:1.2;
+    }
+    &.map {
+        background-image:url(../img/map.jpg);
+    }
+    &:before {
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        bottom:0;
+        background-image:url(../img/dark-overlay.png);
+        background-repeat:repeat;
+        content:"";
+    }
+    .content {
+        position:relative;
+        top:50%;
+        color:#ffffff;
+        z-index:5;
+    }
+}

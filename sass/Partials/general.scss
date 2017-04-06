@@ -45,6 +45,7 @@ body {
 
 
 .btn {
+    text-align:center;
     display:inline-block;
     padding:8px 36px 12px 36px;
     border:0;
@@ -52,8 +53,14 @@ body {
     text-decoration:none;
     color:#ffffff;
     @include transition(all 300ms);
+    &.blue {
+        background-color:$strongblue;
+    }
     &:hover {
-        background-color:darken($green, 10%);
+        background-color:darken($green, 6%);
+        &.blue {
+            background-color:darken($strongblue, 4%);
+        }
     }
     &.hollow {
         padding:6px 34px 10px 34px;
@@ -100,6 +107,31 @@ img {
 .padding-40 {padding-top:40px; padding-bottom:40px;}
 .padding-bottom-40 {padding-bottom:40px;}
 
+.padding-60 {padding-top:60px; padding-bottom:60px;}
+
+.section-heading {
+    font-size:34px;
+    margin:0 0 40px 0;
+    padding:0;
+    display:block;
+    text-align:center;
+    &.white {
+        color:#ffffff;
+    }
+}
+.center-div {
+    padding-top:25px;
+    text-align:center;
+    .btn {
+        -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.15);
+        -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.15);
+        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.15);
+    }
+}
+
+.centered-content {
+    text-align:center;
+}
 
 .centered {
     margin-left:auto;
@@ -121,4 +153,18 @@ img {
 
 .grey-section {
     background-color:$lighter-grey;
+}
+
+.blue-section {
+    background-color:$strongblue;
+}
+
+.green-section {
+    background-color:$green;
+}
+
+.whatsnew-carousel {
+    .slick-dots {
+        margin-top:15px;
+    }
 }
