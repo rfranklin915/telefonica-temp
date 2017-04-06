@@ -1560,6 +1560,7 @@ nav.main-nav .dropdown {
     .intro-carousel .intro-area .container {
       height: 480px; }
     .intro-carousel .intro-area .content {
+      z-index: 90 !important;
       -ms-transform: translateY(-50%);
       /* IE 9 */
       -webkit-transform: translateY(-50%);

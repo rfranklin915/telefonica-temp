@@ -11,6 +11,7 @@
             height:480px;
         }
         .content {
+            z-index:90!important;
             -ms-transform: translateY(-50%); /* IE 9 */
             -webkit-transform: translateY(-50%); /* Safari */
             transform: translateY(-50%);
