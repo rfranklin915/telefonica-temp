@@ -3,6 +3,8 @@
 .main-header {
     display:block;
     width:100%;
+    background-color:#ffffff;
+    z-index:910;
     border-bottom:1px solid $light-grey;
     .logo {
         max-width:200px;

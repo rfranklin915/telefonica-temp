@@ -22,8 +22,17 @@ body {
     font-size:1em;
     line-height:1.4;
     color:$darkblue;
+    overflow-y: scroll;
     &.no-overflow {
         overflow-y:hidden;
+    }
+    &.no-scroll {
+        .main-header {
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+        }
     }
 }
 
