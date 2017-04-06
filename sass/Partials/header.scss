@@ -1,0 +1,44 @@
+﻿@import '../Mixins/mixins';
+
+.main-header {
+    display:block;
+    width:100%;
+    border-bottom:1px solid $light-grey;
+    .logo {
+        max-width:200px;
+        display:block;
+        margin-top:18px;
+        float:left;
+    }
+}
+
+.second-nav {
+    display:block;
+    background:none;
+    height:68px;
+    width:56px;
+    border:0;
+    float:right;
+    padding:0;
+    margin:0;
+    outline:0!important;
+    text-align:center;
+    span {
+        width:22px;
+        height:3px;
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        background-color:$cyan;
+        @include border-radius(2px);
+        @include transition(all 300ms);
+        &.line-2, &.line-3 {
+            margin-top:4px;
+        }
+    }
+    &:hover {
+        span {
+            background-color:darken($cyan, 12%);
+        }
+    }
+}

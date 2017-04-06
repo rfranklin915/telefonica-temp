@@ -1,0 +1,39 @@
+﻿@import '../Mixins/mixins';
+
+footer.main-footer {
+    padding:40px 0;
+    display:block;
+    ul.footer-list {
+        margin:0;
+        padding:0;
+        list-style:none;
+        color:darken($mid-grey, 10%);
+        font-size:13px;
+        float:left;
+        li {
+            display:inline-block;
+            color:inherit;
+            padding-right:12px;
+            margin-right:12px;
+            border-right:1px solid $mid-grey;
+            line-height:1;
+            &:last-child {
+                margin-right:0;
+                padding-right:0;
+                border:0;
+            }
+            a {
+                color:inherit;
+                text-decoration:none;
+                @include transition(color 300ms);
+                &:hover {
+                    color:darken($mid-grey, 30%);
+                }
+            }
+        }
+    }
+    .brands {
+        max-width:170px;
+        float:right;
+    }
+}

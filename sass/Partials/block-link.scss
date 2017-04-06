@@ -1,0 +1,34 @@
+﻿@import '../Mixins/mixins';
+
+.block-carousel {
+    .slick-dots {
+        padding-top:25px;
+        width:100%;
+    }
+}
+
+.block-link {
+    outline:0!important;
+    display:block;
+    text-decoration:none;
+    background-color:$lighter-grey;
+    .text {
+        display:block;
+        padding:15px 15px 25px 15px;
+        color:$midblue;
+        .title {
+            color:$darkblue;
+            font-size:23px;
+            margin-bottom:9px;
+            display:block;
+        }
+        p {
+            margin:0 0 10px 0;
+            font-size:0.85em;
+        }
+        .arrow-link {
+            display:inline-block;
+            margin-top:15px;
+        }
+    }
+}

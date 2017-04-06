@@ -1,5 +1,13 @@
-﻿
-@import 'Partials/general';
-
-@import 'Vendor/normalize';
+﻿@import 'Vendor/normalize';
 @import 'Vendor/bootstrap';
+@import 'Vendor/slick';
+
+@import 'Partials/fonts';
+@import 'Partials/general';
+@import 'Partials/header';
+@import 'Partials/nav';
+@import 'Partials/intro-area';
+@import 'Partials/slick-custom';
+@import 'Partials/block-link';
+@import 'Partials/white-block';
+@import 'Partials/footer';

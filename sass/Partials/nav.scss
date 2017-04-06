@@ -1,0 +1,39 @@
+﻿@import '../Mixins/mixins';
+
+nav.main-nav {
+    ul {
+        list-style:none;
+        padding:0;
+        margin:0 0 0 20%;
+        float:left;
+        font-size:1.1em;
+        li {
+            display:inline-block;
+            color:inherit;
+            padding:0;
+            a {
+                color:inherit;
+                text-decoration:none;
+                padding:0 18px;
+                height:68px;
+                line-height:68px;
+                display:block;
+                @include transition(all 300ms);
+                &:hover {
+                    background-color:$lighter-grey;
+                }
+                &.dropdown {
+                    &:after {
+                        font-family:telefonica-icons;
+                        content:"\E000";
+                        color:$cyan;
+                        font-size:0.6em;
+                        display:inline-block;
+                        margin:0 0 0 8px;
+                    }
+                }
+            }
+        }
+
+    }
+}
