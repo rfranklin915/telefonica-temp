@@ -39,6 +39,8 @@
         speed: 250
     });
 
+    //Initiate WOW plugin
+    new WOW().init();
 
     // Mobile Navigation
     $('nav.main-nav ul li a').click(function (event) {

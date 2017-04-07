@@ -17,6 +17,7 @@
             transform: translateY(-50%);
             @include opacity(0);
             @include transition(all 800ms);
+            padding-left:20px;
         }
         &.slide-vis {
             .content {

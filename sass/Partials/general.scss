@@ -82,9 +82,10 @@ body {
 }
 
 .wide-container {
-    max-width:1950px;
-    margin-left:auto;
-    margin-right:auto;
+    position:relative;
+    //max-width:1950px;
+    /*margin-left:auto;
+    margin-right:auto;*/
 }
 
 h1, h2, h3, h4, h5 {
@@ -99,6 +100,7 @@ img {
 .row {
     clear:both;
 }
+
 
 .spacer-10 {height:10px;}
 .spacer-20 {height:20px;}
@@ -167,4 +169,16 @@ img {
     .slick-dots {
         margin-top:15px;
     }
+}
+
+.covervid-video {
+    margin-top:-80px;
+}
+
+.live-chat {
+    position:absolute;
+    right:0;
+    top:27%;
+    z-index:200;
+    max-height:180px;
 }
