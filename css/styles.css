@@ -3772,6 +3772,8 @@ img {
   background-color: #ffffff;
   z-index: 910;
   border-bottom: 1px solid #e7e7e7; }
+  .main-header .container {
+    position: static; }
   .main-header .logo {
     max-width: 200px;
     display: block;
@@ -3838,7 +3840,7 @@ nav.main-nav > ul {
                         @include rotate(180);
                     }
                 }*/ }
-      nav.main-nav > ul > li > a:hover {
+      nav.main-nav > ul > li > a.active, nav.main-nav > ul > li > a:hover {
         background-color: #f8f8f8; }
       nav.main-nav > ul > li > a.expandable:after {
         font-family: telefonica-icons;
@@ -4034,7 +4036,9 @@ nav.main-nav .dropdown {
   height: 190px;
   margin-bottom: 20px;
   padding: 0;
-  text-decoration: none; }
+  text-decoration: none;
+  background-size: cover;
+  background-position: 50% 50%; }
   .intro-area:before {
     position: absolute;
     content: "";
@@ -4345,6 +4349,90 @@ nav.main-nav .dropdown {
     top: 50%;
     color: #ffffff;
     z-index: 5; }
+
+.tf-meganav {
+  position: absolute;
+  top: 69px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  display: none;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f8f8f8+30,ffffff+30 */
+  background: #f8f8f8;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #f8f8f8 30%, white 30%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #f8f8f8 30%, white 30%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #f8f8f8 30%, white 30%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#ffffff',GradientType=1 );
+  /* IE6-9 */ }
+  .tf-meganav .tf-meganav-area {
+    height: 440px;
+    width: 100%;
+    display: none; }
+    .tf-meganav .tf-meganav-area.visible-area {
+      display: block; }
+    .tf-meganav .tf-meganav-area .left-links {
+      width: 30%;
+      height: 440px;
+      float: left;
+      padding-top: 20px;
+      background-color: #f8f8f8; }
+      .tf-meganav .tf-meganav-area .left-links .left-list-title {
+        display: block;
+        color: #063f53;
+        font-size: 22px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #e7e7e7; }
+      .tf-meganav .tf-meganav-area .left-links ul.tf-meganav-links-left {
+        margin: 0;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        color: #063f53;
+        font-size: 18px; }
+        .tf-meganav .tf-meganav-area .left-links ul.tf-meganav-links-left li a {
+          padding: 10px;
+          display: block;
+          color: inherit;
+          text-decoration: none;
+          -webkit-transition: all 300ms;
+          -moz-transition: all 300ms;
+          -ms-transition: all 300ms;
+          -o-transition: all 300ms;
+          transition: all 300ms; }
+          .tf-meganav .tf-meganav-area .left-links ul.tf-meganav-links-left li a.selected, .tf-meganav .tf-meganav-area .left-links ul.tf-meganav-links-left li a:hover {
+            background-color: #553cfe;
+            color: #ffffff; }
+    .tf-meganav .tf-meganav-area .right-links {
+      width: 70%;
+      height: 400px;
+      float: left;
+      padding: 18px 30px; }
+      .tf-meganav .tf-meganav-area .right-links .right-area {
+        display: none; }
+        .tf-meganav .tf-meganav-area .right-links .right-area.visible {
+          display: block; }
+      .tf-meganav .tf-meganav-area .right-links .right-list-title {
+        font-size: 30px;
+        color: #553cfe; }
+      .tf-meganav .tf-meganav-area .right-links ul.tf-meganav-links-right {
+        list-style: none;
+        padding: 0;
+        margin: 15px 0 0 0;
+        color: #063f53; }
+        .tf-meganav .tf-meganav-area .right-links ul.tf-meganav-links-right li a {
+          color: inherit;
+          text-decoration: none;
+          font-size: 18px;
+          padding: 7px 0;
+          display: block; }
+          .tf-meganav .tf-meganav-area .right-links ul.tf-meganav-links-right li a:hover {
+            text-decoration: underline; }
 
 .social-area-carousels {
   text-align: center; }

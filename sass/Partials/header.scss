@@ -6,6 +6,9 @@
     background-color:#ffffff;
     z-index:910;
     border-bottom:1px solid $light-grey;
+    .container {
+        position:static;
+    }
     .logo {
         max-width:200px;
         display:block;

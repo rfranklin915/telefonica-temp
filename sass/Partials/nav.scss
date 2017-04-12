@@ -20,7 +20,7 @@ nav.main-nav {
                 line-height:68px;
                 display:block;
                 @include transition(all 300ms);
-                &:hover {
+                &.active, &:hover {
                     background-color:$lighter-grey;
                 }
                 &.expandable {
