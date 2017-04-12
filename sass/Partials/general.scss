@@ -56,6 +56,18 @@ body {
     &.blue {
         background-color:$strongblue;
     }
+    &.darkblue {
+        background-color:$darkblue;
+        &:hover {
+            background-color:darken($darkblue, 5%);
+        }
+    }
+    &.cyan {
+        background-color:$cyan;
+        &:hover {
+            background-color:darken($cyan, 5%);
+        }
+    }
     &:hover {
         background-color:darken($green, 6%);
         &.blue {

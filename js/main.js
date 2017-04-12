@@ -86,7 +86,6 @@
             }
     });
 
-
     // Meganav inner functionality
     $('.tf-meganav-area .left-links ul.tf-meganav-links-left li a').mouseenter(function () {
         var $this = $(this),
@@ -102,7 +101,43 @@
         };
     })
 
+    //Product Grid functionality
+    $('.product-grid .product').click(function (e) {
+        e.preventDefault();
 
+        var $this = $(this),
+            dataProduct = $this.attr('data-product-no'),
+            slideTime = 300;
+
+        console.log(dataProduct);
+
+        function showSelected() {
+            $this.addClass('product-active');
+            $('.product-grid .product-content[data-product-area="' + dataProduct + '"]').addClass('visible').slideDown(slideTime);
+        }
+
+        if (!$this.hasClass('product-active')) {
+            console.log('NOT ACTIVE');
+
+            if ($('.product-active').length > 0) {
+                console.log('PRODUCT ACTIVE EXISTS');
+                $('.product-active').removeClass('product-active');
+                console.log('CLASS REMOVED');
+                $('.product-grid .product-content').slideUp();
+                setTimeout(function () {
+                    showSelected();
+                }, 300)
+            }
+            else {
+                showSelected();
+            }
+        }
+        else {
+            console.log('IS ACTIVE');
+            $this.removeClass('product-active');
+            $('.product-grid .product-content').slideUp(slideTime);
+        }
+    })
 
 
 

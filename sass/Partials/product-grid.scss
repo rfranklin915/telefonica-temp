@@ -1,12 +1,25 @@
 ﻿@import '../Mixins/mixins';
 
+.product-intro {
+    h2 {
+        font-size:28px;
+        margin:0 0 20px 0;
+    }
+    p {
+        line-height:1.7;
+    }
+    .btn {
+        margin-top:20px;
+    }
+}
+
 .product-grid {
     margin-bottom:30px;
     float:left;
     width:100%;
-    background-color:lighten($strongblue, 15%);
+    background-color:#ffffff;
     .product {
-        background-color:$strongblue;
+        background-color:darken($lighter-grey, 2%);
         display:block;
         height:200px;
         width:24.9%;
@@ -32,14 +45,14 @@
             margin-top:1px;
         }
         span {
-            color:#ffffff;
-            font-size:20px;
+            color:$darkblue;
+            font-size:18px;
             &:before {
                 font-family:telefonica-icons;
                 display:block;
                 font-size:42px;
                 margin-bottom:15px;
-                color:#ffffff;
+                color:$cyan;
                 @include transition(all 300ms);
             }
             &.prod-1:before {content:"\E024";}
@@ -52,24 +65,66 @@
             &.prod-8:before {content:"\E02B";}
         }
         &:hover {
-            -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
-            -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
-            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
-            -ms-transform: scale(1.02); /* IE 9 */
-            -webkit-transform: scale(1.02); /* Safari */
-            transform: scale(1.02);
+            -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.05);
+            -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.05);
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.05);
+            /*-ms-transform: scale(1.02);
+            -webkit-transform: scale(1.02);
+            transform: scale(1.02);*/
             z-index:11;
-            background-color:#ffffff;
+            background-color:darken($lighter-grey, 4%);
             span {
-                color:$strongblue;
+                //color:$strongblue;
                 &:before {
                     -ms-transform: translateY(-3px);
                     -webkit-transform: translateY(-3px);
                     transform: translateY(-3px); 
-                    color:$strongblue;
+                    //color:$strongblue;
 
                 }
             }
+        }
+    }
+}
+
+.product-content {
+    background-color:$darkblue;
+    float:left;
+    width:100%;
+    display:none;
+    clear:both;
+    border-left:1px solid #ffffff;
+    border-right:1px solid #ffffff;
+    .product-content-padding {
+        padding:15px;
+    }
+    .product-inner {
+        float:left;
+        width:33.333%;
+        color:#ffffff;
+        margin-bottom:20px;
+        padding:10px 25px 10px 10px;
+        h5 {
+            font-size:18px;
+            margin:0;
+            font-weight:normal;
+            &:after {
+                font-family:telefonica-icons;
+                content:"\E002";
+                color:$yellow;
+                font-size:0.75em;
+                margin-left:6px;
+                vertical-align:top;
+                display:inline-block;
+                margin-top:5px;
+            }
+        }
+        p {
+            margin:10px 0 0 0;
+            @include opacity(0.7);
+        }
+        &:nth-child(3n+1) {
+            clear:both;
         }
     }
 }

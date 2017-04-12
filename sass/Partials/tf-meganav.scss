@@ -65,9 +65,32 @@
             padding:18px 30px;
             .right-area {
                 display:none;
+                position:relative;
                 &.visible {
                     display:block;
                 }
+
+                .featured {
+                    width:400px;
+                    position:absolute;
+                    right:0;
+                    top:10px;
+                    img {
+                        margin-bottom:15px;
+                    }
+                    h5 {
+                        font-size:16px;
+                        margin:0;
+                        font-weight:600;
+                        margin-bottom:12px;
+                        display:block;
+                    }
+                    p {
+                        color:$darkblue;
+                        margin:0 0 10px 0;
+                    }
+                }
+
             }
             .right-list-title {
                 font-size:30px;
@@ -84,7 +107,7 @@
                         text-decoration:none;
                         font-size:18px;
                         padding:7px 0;
-                        display:block;
+                        display:inline-block;
                         &:hover {
                             text-decoration:underline;
                         }
@@ -92,5 +115,12 @@
                 }
             }
         }
+    }
+}
+
+@media only (max-width:1450px) {
+    .tf-meganav .tf-meganav-area .right-links .right-area .featured {
+        width:300px;
+        right:20px;
     }
 }
